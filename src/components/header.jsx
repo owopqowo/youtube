@@ -24,10 +24,14 @@ class Header extends PureComponent {
     this.headerRef.current.classList.toggle(styles.on);
   }
 
+  onRefresh() {
+    window.location.reload();
+  }
+
   render() {
     return (
       <header className={styles.header} ref={this.headerRef}>
-        <a href="/" className={`${styles.logo} ${styles.test}`}><img src={logo} alt="youtube" /></a>
+        <a href="#" className={`${styles.logo}`} onClick={this.onRefresh}><img src={logo} alt="youtube" /></a>
         <button className={styles['layer-button']} onClick={this.onLayer}><i className="fas fa-search"></i><i className="fas fa-times"></i></button>
         <form onSubmit={this.onSubmit}>
           <div className={styles.search}>
