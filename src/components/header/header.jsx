@@ -1,15 +1,11 @@
 import React from 'react';
-import logo from '../../images/yt_logo.png';
 import styles from './header.module.css';
 
 
 
 const Header = (props) => {
-
   const inputRef = React.createRef();
   const headerRef = React.createRef();
-  // const onSubmit = onSubmit.bind(this);
-  // const onLayer = onLayer.bind(this);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +25,7 @@ const Header = (props) => {
 
   return (
     <header className={styles.header} ref={headerRef}>
-      <a href="#!" className={`${styles.logo}`} onClick={onRefresh}><img src={logo} alt="youtube" /></a>
+      <a href="#!" className={`${styles.logo}`} onClick={onRefresh}><img src={`${process.env.PUBLIC_URL}/images/yt_logo.png`} alt="youtube" /></a>
       <button className={styles['layer-button']} onClick={onLayer}><i className="fas fa-search"></i><i className="fas fa-times"></i></button>
       <form onSubmit={onSubmit}>
         <div className={styles.search}>
