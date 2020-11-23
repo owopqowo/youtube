@@ -1,0 +1,16 @@
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1000px) {
+  .videos {
+    grid-row-end: 2;
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-column-start: 2;
+  }
+  div + .videos {
+    max-width: 400px;
+  }
+}

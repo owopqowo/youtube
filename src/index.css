@@ -38,6 +38,7 @@ button {
 }
 
 .wrap {
+  overflow: hidden;
   display: grid;
   padding-top: 44px;
 }
