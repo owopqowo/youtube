@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './header.module.css';
 
 
 
 const Header = (props) => {
-  const inputRef = React.createRef();
-  const headerRef = React.createRef();
+  const inputRef = useRef();
+  const headerRef = useRef();
 
   const onSubmit = (e) => {
     e.preventDefault();
