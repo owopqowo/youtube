@@ -8,7 +8,7 @@ class View extends Component {
     return (
       <div className={styles['video-view']}>
         <div className={styles['video-player']}>
-          <iframe id="player" type="text/html" src={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`} frameBorder="0"></iframe>
+          <iframe id="player" type="text/html" src={`//www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`} frameBorder="0"></iframe>
         </div>
         <div className={styles['video-info']}>
           <h2 className={styles['video-title']}>{this.props.video.snippet.title}</h2>
