@@ -1,0 +1,19 @@
+.video-container {
+  overflow: hidden;
+  display: flex;
+  padding-top: 44px;
+  
+}
+
+.video-list {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .video-container {
+    padding-top: 60px;
+  }
+  .video-view {
+    flex: 0 0 75%
+  }
+}

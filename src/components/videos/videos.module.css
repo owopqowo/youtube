@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .videos {
     grid-row-end: 2;
     grid-row-start: 1;

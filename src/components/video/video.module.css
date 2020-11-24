@@ -43,13 +43,13 @@
 }
 
 .video-desc {
-  max-height: 85px;
+  max-height: 78px;
   -webkit-line-clamp: 4;
   opacity: 0.8;
 }
 
-@media (min-width: 1000px) {
-  header + ul .video {
+@media (min-width: 1200px) {
+  .video.card {
     width: 33.3333%;
   }
 }
