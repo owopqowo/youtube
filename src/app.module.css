@@ -1,17 +1,22 @@
 .video-container {
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   padding-top: 44px;
-  
+}
+
+.video-view {
+  flex: 0 0 100%
 }
 
 .video-list {
   width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .video-container {
     padding-top: 60px;
+    flex-direction: row;
   }
   .video-view {
     flex: 0 0 75%
