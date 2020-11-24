@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './header.module.css';
 
 
 
-const Header = (props) => {
+const Header = memo((props) => {
   const inputRef = useRef();
   const headerRef = useRef();
 
@@ -22,7 +22,6 @@ const Header = (props) => {
   const onRefresh = () => {
     window.location.reload();
   }
-
   return (
     <header className={styles.header} ref={headerRef}>
       <a href="#!" className={`${styles.logo}`} onClick={onRefresh}><img src={`${process.env.PUBLIC_URL}/images/yt_logo.png`} alt="youtube" /></a>
@@ -35,6 +34,6 @@ const Header = (props) => {
       </form>
     </header>
   )
-};
+});
 
 export default Header;

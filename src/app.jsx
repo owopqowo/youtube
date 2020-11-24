@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import Header from './components/header/header';
 import Videos from './components/videos/videos';
 import View from './components/view/view';
@@ -12,16 +12,16 @@ const App = ({youtube}) => {
     youtube
       .mostPopular()
       .then(videos => setVideos(videos));
-  }, []);
+  }, [youtube]);
 
-  const search = query => {
+  const search = useCallback(query => {
     youtube
       .search(query)
       .then(videos => {
         setVideos(videos);
         setView(null);
       });
-  }
+  }, []);
 
   const handleView = (videoObj) => {
     window.scrollTo(0, 0);

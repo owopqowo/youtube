@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './video.module.css';
 
-const Video = (props) => {
-  console.log(props.display);
+const Video = memo((props) => {
   const handleView = () => {
     props.onView(props.video);
   }
@@ -14,7 +13,8 @@ const Video = (props) => {
       <p className={styles['video-desc']}>{props.video.snippet.description}</p>
     </li>
   )
-};
+});
+
 
 
 export default Video;
